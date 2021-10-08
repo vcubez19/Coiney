@@ -11,8 +11,21 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
+    @IBOutlet weak var results: WKInterfaceLabel!
     override func awake(withContext context: Any?) {
         // Configure interface objects here.
+    }
+    
+    @IBAction func flipButtonPressed() {
+        
+        let randomFlip = Bool.random()
+        
+        if(randomFlip){
+            results.setText("Heads")
+        }
+        else{
+            results.setText("Tails")
+        }
     }
     
     override func willActivate() {
