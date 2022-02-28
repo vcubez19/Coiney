@@ -13,7 +13,6 @@ class InterfaceController: WKInterfaceController {
 
     @IBOutlet weak var results: WKInterfaceLabel!
     override func awake(withContext context: Any?) {
-        // Configure interface objects here.
     }
     
     @IBAction func flipButtonPressed() {
@@ -21,19 +20,17 @@ class InterfaceController: WKInterfaceController {
         let randomFlip = Bool.random()
         
         if(randomFlip){
-            results.setText("Heads")
+            results.setText("It's Heads")
         }
         else{
-            results.setText("Tails")
+            results.setText("It's Tails")
         }
     }
     
     override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
     }
     
     override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
     }
 
 }
